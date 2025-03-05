@@ -1,0 +1,25 @@
+*handler.py*
+
+def handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Hello, brayan!"
+    }
+
+
+*serverless.yml*
+
+service:
+  name: parcial-1-electiva
+
+provider:
+  name: aws
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: handler.handler
+    events:
+      - http:
+          path: hello brayan 
+          method: get
